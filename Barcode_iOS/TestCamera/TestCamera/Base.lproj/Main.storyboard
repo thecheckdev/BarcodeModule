@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="QRScanView" translatesAutoresizingMaskIntoConstraints="NO" id="JIf-H4-zqL" customClass="QRScanView" customModule="TestCamera" customModuleProvider="target">
+                                <rect key="frame" x="125" y="348.66666666666669" width="125" height="125"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JIf-H4-zqL" secondAttribute="height" multiplier="1:1" id="15e-Vb-r95"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbZ-uW-bsw">
+                                <rect key="frame" x="164.66666666666666" y="523.66666666666663" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="scanButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uOt-4B-eIU"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6OX-Ea-xv8">
+                                <rect key="frame" x="93.666666666666671" y="144" width="187.66666666666663" height="187.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6OX-Ea-xv8" secondAttribute="height" multiplier="1:1" id="FsH-Sd-CYZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zbZ-uW-bsw" firstAttribute="centerX" secondItem="JIf-H4-zqL" secondAttribute="centerX" id="0AX-3A-Uqm"/>
+                            <constraint firstItem="6OX-Ea-xv8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="58t-Wi-RcQ"/>
+                            <constraint firstItem="6OX-Ea-xv8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EZl-iP-P9u"/>
+                            <constraint firstItem="zbZ-uW-bsw" firstAttribute="top" secondItem="JIf-H4-zqL" secondAttribute="bottom" constant="50" id="IJ4-Yd-U3i"/>
+                            <constraint firstItem="JIf-H4-zqL" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="PBh-Pf-dd1"/>
+                            <constraint firstItem="6OX-Ea-xv8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="a2q-AC-LRa"/>
+                            <constraint firstItem="JIf-H4-zqL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rca-0X-TAu"/>
+                            <constraint firstItem="JIf-H4-zqL" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="1:3" id="sNR-j4-AMu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="qrImageView" destination="6OX-Ea-xv8" id="Uo0-pJ-PYB"/>
+                        <outlet property="scanView" destination="JIf-H4-zqL" id="kmt-eX-FnU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-288" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
